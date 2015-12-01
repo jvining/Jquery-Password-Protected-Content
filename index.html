@@ -71,11 +71,11 @@
 
  	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">
-				<form name="login" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+			<div class="col-md-4 col-sm-4">
+				<form name="login">
 					<div class="form-group">
 						<label>Username:</label>
-						<input class="form-control" name="id" size="6" type="text" placeholder="Username">
+						<input class="form-control" name="id" size="6" type="text" placeholder="User Name">
 					</div>
 					<div class="form-group">
 						<label>Password:</label>
@@ -87,7 +87,7 @@
  		</div>
 		<div class="row voffset3 hidden" id="hiddenStuff">
 			<div class="col-xs-8 col-xs-offset-2">
-					<iframe width="100%" height="415" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+				<iframe width="100%" height="415" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
@@ -97,7 +97,7 @@
 	    	<div class="row">
 	        	<div class="col-xs-12">
 					<hr/>
-	            	<p>Jquery Password Protected Content 2015</p>
+	            	<p>Jquery Password Protected Content | 2015</p>
 	        	</div>
 	    	</div>
 		</div>
@@ -108,13 +108,13 @@
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js" type="text/javascript"></script>
 <script language="javascript">
 	function pasuser(form) { 
-		var userName = "secretname"; 
-		var loginPassword = "secretpassword"; 
+		var userName = "name"; 
+		var loginPassword = "password"; 
 		if (form.id.value== userName) { 
 			if (form.pass.value== loginPassword ) { 
-				$('#hiddenStuff').removeClass('hidden')
+				$('#hiddenStuff').toggleClass( "hidden", 1000, "easeInSine" );
 		 	} 
-		else { alert("Wrong Password") } } 
+		else { alert("Wrong Password"); } } 
 		else { alert("Wrong Username"); } 
 	} 
 </script>
